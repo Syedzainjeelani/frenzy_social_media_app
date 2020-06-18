@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_social_ui/helpers/login_image_clipper.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -9,13 +10,16 @@ class LoginScreen extends StatelessWidget {
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
-              Image(
-                image: AssetImage('assets/images/login_background.jpg'),
-                height: MediaQuery.of(context).size.height * 0.3,
-                fit: BoxFit.cover,
+              ClipPath(
+                clipper: LoginImageClipper(),
+                child: Image(
+                  image: AssetImage('assets/images/login_background.jpg'),
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  fit: BoxFit.cover,
+                ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Text(
                 'FRENZY',
@@ -54,6 +58,51 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   obscureText: true,
+                ),
+              ),
+              SizedBox(
+                height: 40.0,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  height: 45.0,
+                  alignment: Alignment.center,
+                  margin: EdgeInsets.symmetric(horizontal: 80),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
+              // Expanded(
+              //     child: SizedBox(
+              //   height: 50,
+              // )),
+              Expanded(
+                child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Container(
+                    height: 80,
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    decoration:
+                        BoxDecoration(color: Theme.of(context).primaryColor),
+                    child: Text(
+                      'Don\'t have an account? Sign up',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
                 ),
               ),
             ],
