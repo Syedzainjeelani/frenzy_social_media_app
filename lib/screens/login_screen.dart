@@ -89,18 +89,21 @@ class LoginScreen extends StatelessWidget {
               Expanded(
                 child: Align(
                   alignment: FractionalOffset.bottomCenter,
-                  child: Container(
-                    height: 80,
-                    alignment: Alignment.center,
-                    width: double.infinity,
-                    decoration:
-                        BoxDecoration(color: Theme.of(context).primaryColor),
-                    child: Text(
-                      'Don\'t have an account? Sign up',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      height: 80,
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      decoration:
+                          BoxDecoration(color: Theme.of(context).primaryColor),
+                      child: Text(
+                        'Don\'t have an account? Sign up',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                 ),
