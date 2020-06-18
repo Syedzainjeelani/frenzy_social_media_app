@@ -1,4 +1,4 @@
-# frenzy_social_media_app
+# Frenzy App
 FRENZY - Social Media App UI 
 
 Screen Shots comming soon...
