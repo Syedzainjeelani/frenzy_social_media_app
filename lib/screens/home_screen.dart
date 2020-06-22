@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen>
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Text(
                   'Following',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
               Container(
@@ -75,6 +75,30 @@ class _HomeScreenState extends State<HomeScreen>
                     itemBuilder: (context, index) {
                       User user = users[index];
                       return FollowingCircle(user: user);
+                    }),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'Posts',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Container(
+                height: 400,
+                color: Colors.red,
+                child: ListView.builder(
+                    itemCount: posts.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.all(15),
+                        width: 280,
+                        height: 200,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(15)),
+                      );
                     }),
               ),
             ],
