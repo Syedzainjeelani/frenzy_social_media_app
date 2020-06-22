@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_ui/helpers/login_image_clipper.dart';
+import 'package:flutter_social_ui/screens/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -64,7 +65,10 @@ class LoginScreen extends StatelessWidget {
                 height: 40.0,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                },
                 child: Container(
                   height: 45.0,
                   alignment: Alignment.center,

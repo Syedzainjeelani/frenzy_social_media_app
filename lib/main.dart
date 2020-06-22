@@ -8,11 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Frenzy Social Media App',
+      title: 'Frenzy App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blueAccent,
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.redAccent,
+        primarySwatch: Colors.red,
       ),
       home: LoginScreen(),
     );
