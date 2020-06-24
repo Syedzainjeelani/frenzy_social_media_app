@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_ui/models/user_model.dart';
 
-class FollowingCircle extends StatelessWidget {
+class UserCircle extends StatelessWidget {
   final User user;
-  FollowingCircle({this.user});
+  UserCircle({this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class FollowingCircle extends StatelessWidget {
           BoxShadow(
               color: Colors.black38, offset: Offset(0, 2), blurRadius: 6.0),
         ],
-        border: Border.all(width: 1, color: Colors.white54),
+        border: Border.all(width: 1, color: Theme.of(context).primaryColor),
       ),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
