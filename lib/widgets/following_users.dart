@@ -32,7 +32,11 @@ class UsersCarousal extends StatelessWidget {
               itemCount: users.length,
               itemBuilder: (context, index) {
                 User user = users[index];
-                return UserCircle(user: user);
+                return UserCircle(
+                  user: user,
+                  width: 60,
+                  height: 60,
+                );
               }),
         ),
       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_ui/data/data.dart';
+import 'package:flutter_social_ui/widgets/custom_drawer.dart';
 import 'package:flutter_social_ui/widgets/following_users.dart';
 import 'package:flutter_social_ui/widgets/posts_carousal.dart';
 
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: CustomDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
