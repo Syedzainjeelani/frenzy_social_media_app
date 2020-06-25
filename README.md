@@ -9,7 +9,7 @@ More Screen Shots comming soon...
 <p align="center">Home Screen</p>
 <img src="assets/screenshots/home_screen.png" width="400px" alt="home_screen"</img>
 <p align="center">Drawer</p>
-<img src="assets/screenshots/drawer.png" width="400px" alt="drawer"</img>
+<img src="assets/screenshots/Drawer.png" width="400px" alt="drawer"</img>
 </div>
 
 
