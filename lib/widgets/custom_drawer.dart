@@ -44,7 +44,42 @@ class CustomDrawer extends StatelessWidget {
                 ),
               )
             ],
-          )
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.chat),
+            title: Text('Chat'),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.map),
+            title: Text('Map'),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.supervised_user_circle),
+            title: Text('Your Profile'),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.settings),
+            title: Text('Settings'),
+          ),
+          Expanded(
+            child: SizedBox(
+              height: 50,
+            ),
+          ),
+          ListTile(
+            onTap: () {},
+            leading: Icon(Icons.directions_run),
+            title: Text('Logout'),
+          ),
         ],
       ),
     );
