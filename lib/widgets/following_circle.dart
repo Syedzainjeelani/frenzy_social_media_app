@@ -5,7 +5,8 @@ class UserCircle extends StatelessWidget {
   final User user;
   final double width;
   final double height;
-  UserCircle({this.user, this.width, this.height});
+  final bool hasBorder;
+  UserCircle({this.user, this.width, this.height, this.hasBorder = true});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,9 @@ class UserCircle extends StatelessWidget {
           BoxShadow(
               color: Colors.black38, offset: Offset(0, 2), blurRadius: 6.0),
         ],
-        border: Border.all(width: 1, color: Theme.of(context).primaryColor),
+        border: hasBorder
+            ? Border.all(width: 1, color: Theme.of(context).primaryColor)
+            : null,
       ),
       child: ClipRRect(
           borderRadius: BorderRadius.circular(50),

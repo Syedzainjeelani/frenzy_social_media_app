@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_ui/data/data.dart';
+import 'package:flutter_social_ui/screens/home_screen.dart';
 import 'package:flutter_social_ui/screens/profile_screen.dart';
 import 'package:flutter_social_ui/widgets/following_circle.dart';
 
@@ -55,7 +56,10 @@ class CustomDrawer extends StatelessWidget {
             ],
           ),
           _buildTile(
-            () => Navigator.pop(context),
+            () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => HomeScreen()),
+            ),
             Icon(Icons.home),
             Text('Home'),
           ),
