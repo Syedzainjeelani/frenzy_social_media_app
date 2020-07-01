@@ -12,11 +12,15 @@ class PostsCarousal extends StatelessWidget {
     return AnimatedBuilder(
       animation: pageController,
       builder: (context, widget) {
-        double value = 1;
+        double value =
+            pageController != null && index != pageController.initialPage
+                ? 0.75
+                : 1;
         if (pageController.position.haveDimensions) {
           value = pageController.page - index;
           value = (1 - (value.abs() * 0.25)).clamp(0.0, 1.0);
         }
+
         return Center(
           child: SizedBox(
             height: Curves.easeInOut.transform(value) * 400,

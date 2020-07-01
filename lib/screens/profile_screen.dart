@@ -19,9 +19,9 @@ class _ProfileScreenState extends State<ProfileScreen>
   void initState() {
     super.initState();
     _postsController =
-        PageController(initialPage: 1, keepPage: false, viewportFraction: 0.8);
+        PageController(initialPage: 0, keepPage: true, viewportFraction: 0.8);
     _favoritesController =
-        PageController(initialPage: 1, keepPage: false, viewportFraction: 0.8);
+        PageController(initialPage: 0, keepPage: true, viewportFraction: 0.8);
   }
 
   @override
