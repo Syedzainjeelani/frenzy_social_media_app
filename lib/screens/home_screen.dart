@@ -79,7 +79,6 @@ class _HomeScreenState extends State<HomeScreen>
                 title: 'Followers',
                 users: users.reversed.toList(),
               ),
-              // UsersCarousal(),
             ],
           )
         ],

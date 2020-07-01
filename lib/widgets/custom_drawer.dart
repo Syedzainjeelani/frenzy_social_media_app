@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_ui/data/data.dart';
+import 'package:flutter_social_ui/screens/profile_screen.dart';
 import 'package:flutter_social_ui/widgets/following_circle.dart';
 
 class CustomDrawer extends StatelessWidget {
+  _buildTile(onTap, leading, title) {
+    return ListTile(
+      onTap: onTap,
+      leading: leading,
+      title: title,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -45,41 +54,38 @@ class CustomDrawer extends StatelessWidget {
               )
             ],
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.home),
-            title: Text('Home'),
+          _buildTile(
+            () => Navigator.pop(context),
+            Icon(Icons.home),
+            Text('Home'),
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.chat),
-            title: Text('Chat'),
+          _buildTile(
+            () {},
+            Icon(Icons.chat),
+            Text('Chat'),
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.map),
-            title: Text('Map'),
+          _buildTile(
+            () {},
+            Icon(Icons.map),
+            Text('Map'),
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.supervised_user_circle),
-            title: Text('Your Profile'),
+          _buildTile(
+            () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => ProfileScreen())),
+            Icon(Icons.supervised_user_circle),
+            Text('Your Profile'),
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
+          _buildTile(
+            () {},
+            Icon(Icons.settings),
+            Text('Settings'),
           ),
           Expanded(
             child: SizedBox(
               height: 50,
             ),
           ),
-          ListTile(
-            onTap: () {},
-            leading: Icon(Icons.directions_run),
-            title: Text('Logout'),
-          ),
+          _buildTile(() {}, Icon(Icons.directions_run), Text('Logout')),
         ],
       ),
     );
